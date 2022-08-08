@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "91417bf9-9dff-4464-9c81-d772b0d625a5",
+		"name": "spring-rest-custom-query-param",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v1/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "cities",
+							"value": "Andersonbury-MO",
+							"description": "One coty",
+							"disabled": true
+						},
+						{
+							"key": "cities",
+							"value": "Port Myeshaville-NH,Liview-TN",
+							"description": "Multiple cities",
+							"disabled": true
+						},
+						{
+							"key": "cities",
+							"value": "Myeshaville-NH,Liview-",
+							"description": "invalid parameter",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
