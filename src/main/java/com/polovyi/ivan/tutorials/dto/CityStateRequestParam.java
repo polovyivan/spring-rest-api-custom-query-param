@@ -13,8 +13,8 @@ public class CityStateRequestParam {
 
     private Set<@NotNull(message = "The query param cities is invalid") CityStateRequestParamDTO> citiesWithStates;
 
-    public CityStateRequestParam(String holidayCitiesWithStatesString) {
-        this.citiesWithStates = Stream.of(StringUtils.split(holidayCitiesWithStatesString, ","))
+    public CityStateRequestParam(String CitiesWithStatesString) {
+        this.citiesWithStates = Stream.of(StringUtils.split(CitiesWithStatesString, ","))
                 .map(s -> {
                     String city = StringUtils.substringBeforeLast(s, "-");
                     String state = StringUtils.strip(StringUtils.substringAfterLast(s, "-"), StringUtils.SPACE);
